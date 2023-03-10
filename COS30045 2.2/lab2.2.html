@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="description"	content="Data Visualisation Exercise 1"/>
+		<meta name="keywords"		  content="HTML, CSS"/>
+		<meta name="author"			  content="Your name here"/>
+		
+		<title>Task 2.2 D3 Drawing with Data - Bar Chart</title>
+
+        <script src="https://d3js.org/d3.v6.min.js"></script>        
+	</head>
+
+        <body>
+
+            <h1 style="font-family:Trebuchet MS; color:red">Task 2.2 D3 Drawing with Data - Bar Chart</h1>
+
+            <script>
+                var w = 500;
+                var h = 200;
+
+                var barPadding = 10;
+
+                var dataset = [14,5,26,23,9];
+
+                var svg = d3.select("body")
+                    .append("svg")
+                    .attr("width", w)
+                    .attr("height", h);
+
+                svg.selectAll("rect")
+                    .data(dataset)
+                    .enter()
+                    .append("rect")
+                    .attr("x", function(d, i){return i * (w / dataset.length) + barPadding;})
+                    .attr("y", function(d){return 100 + (100 - (d * 4));})
+                    .attr("width", (w / dataset.length) - barPadding)
+                    .attr("height", function(d){return d * 4;})
+                    .style("fill", "cyan");
+            </script>
+
+            <footer style="background-color:lightblue">COS30045 Data Visualisation</footer>
+        </body>
+</html>

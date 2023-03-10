@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="description"	content="Data Visualisation Exercise 1"/>
+		<meta name="keywords"		  content="HTML, CSS"/>
+		<meta name="author"			  content="Your name here"/>
+		
+		<title>Task 1.1 HTML and CSS Demo Page</title>
+	</head>
+
+		<body>
+
+			<h1 style="font-family:Trebuchet MS; color:red">Pet Ownership During The COVID Pandemic</h1>
+			<h2>Neel Patel</h2>
+			<p>Lorem ipsum, dolor sit amet <b>consectetur</b> adipisicing elit. <i>Quas tempore voluptatibus atque vitae, consequuntur dolore</i> perspiciatis perferendis facilis minima ea at temporibus numquam et? Fugiat reiciendis quos mollitia praesentium perferendis!</p>
+
+			<ul>
+				<li>Dog</li>
+				<li>Cat</li>
+				<li>Fish</li>
+				<li>Birds</li>
+				<li>Small Mammals</li>
+				<li>Reptiles</li>
+				<li>Other</li>
+			</ul>			
+
+			<button style="background-color: lightblue" id="2019" onclick="tbl2019()">2019</button>
+			<button style="background-color: lightgrey" id="2021" onclick="tbl2021()">2021</button>
+			<button style="background-color: red" id="2019-2021" onclick="tbl2019_2021()">Both</button>
+		</br></br>
+			<img class="image" id="0" src="images/pets_2019.png" alt="Statistics for Australian pet ownership for 2019">
+			<figcaption class="table-caption" id="0">Figure 1: Percent of most popular pet owned by Australians in 2019. Data Source: <a href="https://animalmedicinesaustralia.org.au/wp-content/uploads/2021/08/AMAU005-PATP-Report21_v1.41_WEB.pdf">Animal Medicines Australia Report</a></figcaption>
+			
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ea ipsa quod maxime qui temporibus incidunt eligendi quia dolor a, nobis facere sit quo molestias deleniti alias id laborum. Ipsa!</p>
+
+			<footer style="background-color:lightblue">COS30045 Data Visualisation</footer>
+
+		</body>
+	<script>
+		let image = document.getElementsByClassName('image')[0];
+		let caption = document.getElementsByClassName('table-caption')[0];
+	
+		function tbl2019(){
+			image.src = "images/pets_2019.png";
+			image.alt = "Statistics for Australian pet ownership for 2019";
+			caption.innerHTML = "Figure 1: Percent of most popular pet owned by Australians in 2019. Data Source: <a href='https://animalmedicinesaustralia.org.au/wp-content/uploads/2021/08/AMAU005-PATP-Report21_v1.41_WEB.pdf'>Animal Medicines Australia Report</a>";
+		}
+
+		function tbl2021(){
+			image.src = "images/pets_2021.png";
+			image.alt = "Statistics for Australian pet ownership for 2021";
+			caption.innerHTML = "Figure 2: Percent of most popular pet owned by Australians in 2021. Data Source: <a href='https://animalmedicinesaustralia.org.au/wp-content/uploads/2021/08/AMAU005-PATP-Report21_v1.41_WEB.pdf'>Animal Medicines Australia Report</a>";
+		}
+
+		function tbl2019_2021(){
+			image.src = "images/pets_2019_vs_2021.png";
+			image.alt = "Statistics for Australian pet ownership from 2019 to 2021";
+			caption.innerHTML = "Figure 3: Comparison of most popular pet owned by Australians from 2019 to 2021. Data Source: <a href='https://animalmedicinesaustralia.org.au/wp-content/uploads/2021/08/AMAU005-PATP-Report21_v1.41_WEB.pdf'>Animal Medicines Australia Report</a>";
+		}
+	</script>
+</html>

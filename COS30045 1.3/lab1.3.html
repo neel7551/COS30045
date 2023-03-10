@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="description"	content="Data Visualisation Exercise 1"/>
+		<meta name="keywords"		  content="HTML, CSS"/>
+		<meta name="author"			  content="Your name here"/>
+		
+		<title>Task 1.1 HTML and CSS Demo Page</title>
+	</head>
+
+		<body>
+			<h1 style="font-family:Trebuchet MS; color:red">Drawing Shapes with SVG</h1>
+			<h2>Neel Patel</h2>
+
+            <svg width="805" height="805">
+                <g transform="translate(20,0)">
+                    <rect x="4" y="100" width="200" height="100" stroke="blue" stroke-width="2" opacity="0.5" fill="red"/>
+                    <circle cx="50" cy="50" r="40" stroke="purple" stroke-width="4" fill="lightgreen"/>
+                    <line x1="50" y1="250" x2="50" y2="800" stroke="purple" stroke-width="4"/>
+                    <line x1="48" y1="250" x2="600" y2="250" stroke="blue" stroke-width="4"/>
+                    <line x1="49" y1="800" x2="601" y2="250" stroke="cyan" stroke-width="4"/>
+                    <ellipse cx="140" cy="30" rx="40" ry="25" fill="rgba(3, 197, 155, 0.8)"/>
+                </g>
+            </svg>
+            
+            <h2>Pet Ownership Data</h2>
+            <svg width="1100" height="500">
+                <rect class="dogs" x="100" y="100" width="100" height="400" fill="cornflowerblue" ></rect>
+                <rect class="cats" x="250" y="150" width="100" height="400" fill="red" ></rect>
+                <rect class="fish" x="400" y="180" width="100" height="400" fill="green" ></rect>
+                <rect class="birds" x="550" y="200" width="100" height="400" fill="yellow" ></rect>
+                <rect class="small-mammals" x="700" y="300" width="100" height="400" fill="purple" ></rect>
+                <rect class="reptiles" x="850" y="400" width="100" height="400" fill="cyan" ></rect>
+                <rect class="other" x="1000" y="450" width="100" height="400" fill="pink" ></rect>
+            </svg>
+
+			<footer style="background-color:lightblue">COS30045 Data Visualisation</footer>
+		</body>
+</html>
