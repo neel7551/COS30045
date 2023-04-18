@@ -31,15 +31,15 @@ function init ()
         .range([padding,w - padding]); //svg width with padding to stop cut-off
 
     var yScale = d3.scaleLinear()
-    .domain([d3.min(dataset, function(d) //used to calculate min y value of dataset
-    {
-        return d[1];  //look at first y no. in array
-    }),
-    d3.max(dataset, function(d)  //used to calculate max y value of dataset
-    { 
-        return d[1];  //look at first no. in array
-    })])
-    .range([padding,h - padding]); //svg height with padding to stop cut off
+        .domain([d3.min(dataset, function(d) //used to calculate min y value of dataset
+        {
+            return d[1];  //look at first y no. in array
+        }),
+        d3.max(dataset, function(d)  //used to calculate max y value of dataset
+        { 
+            return d[1];  //look at first no. in array
+        })])
+        .range([padding,h - padding]); //svg height with padding to stop cut off
 
     var svg = d3.select("p")
         .data(dataset)

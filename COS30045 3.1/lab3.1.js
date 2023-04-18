@@ -26,7 +26,7 @@ function init ()
         }),
         d3.max(dataset, function(d)  //used to calculate max x value of dataset
         { 
-            return d[0];  //look at first no. in array
+            return d[0];  
         })])
         .range([padding,w - padding]); //svg width with padding to stop cut-off
 
@@ -37,7 +37,7 @@ function init ()
     }),
     d3.max(dataset, function(d)  //used to calculate max y value of dataset
     { 
-        return d[1];  //look at first no. in array
+        return d[1];  
     })])
     .range([padding,h - padding]); //svg height with padding to stop cut off
 
